@@ -1,0 +1,14 @@
+		 ORG 800H  
+	 MVI A,0H  
+	 RST 1  
+	 INR A  
+	 CPI 5  
+	 JNZ 801H  
+	 MOV B,A  
+ETYKIETA 	 MVI A,'*'  
+	 RST 1  
+	 MOV A,B  
+	 INR B  
+	 CPI 10  
+	 JNZ ETYKIETA  
+	 HLT  
